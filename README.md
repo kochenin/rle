@@ -1,4 +1,4 @@
 # rle
-Russian Language Engine for Mathematica (Wolfram Language) | Движок русского языка на Mathematica.
+rle или russian language engine или движок русского языка на Mathematica (Wolfram Language).
 
-Движок русского языка позволяет эффективно использовать возможности Mathematica для исследования русских текстов с различных 
+Движок русского языка позволяет эффективно использовать возможности Mathematica для исследования русских текстов.
