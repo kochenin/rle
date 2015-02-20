@@ -1,0 +1,220 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      6492,        211]
+NotebookOptionsPosition[      5192,        161]
+NotebookOutlinePosition[      5751,        182]
+CellTagsIndexPosition[      5708,        179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\:0410\:043b\:0444\:0430\:0432\:0438\:0442", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["\:0411\:0443\:043a\:0432\:044b", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["\:0418\:0434\:0435\:043d\:0442\:0438\:0444\:0438\:043a\:0430\:0446\:0438\
+\:044f \:0431\:0443\:043a\:0432", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+\:0418\:0434\:0435\:043d\:0442\:0438\:0444\:0438\:043a\:0430\:0446\:0438\:044f\
+ \:043e\:0442\:0434\:0435\:043b\:044c\:043d\:043e\:0439 \:0431\:0443\:043a\
+\:0432\:044b \:0438\:043b\:0438 \:0431\:0443\:043a\:0432 \:0432 \:0441\:0442\
+\:0440\:043e\:043a\:0435 \:043d\:0435\:0437\:0430\:0432\:0438\:0441\:0438\
+\:043c\:043e \:043e\:0442 \:0440\:0435\:0433\:0438\:0441\:0442\:0440\:0430.\
+\>", "Subsubsection"],
+
+Cell["\:041f\:0440\:0438\:043c\:0435\:0440", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LetterQ", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<\:0430\>\"", ",", "\"\<\:0430\:0431\:0432\>\"", ",", "\"\<\:0410\>\"",
+     ",", "\"\<\:0410\:0411\:0412\>\"", ",", "\"\<\:0410\:0431\:0432\>\"", 
+    ",", "\"\<\:0430\:0411\:0412\>\"", ",", "\"\<\:0430\:0431\:0412\>\"", 
+    ",", "\"\<\:0430\:0411\:0432\>\"", ",", "\"\<\:0410\:0431\:0412\>\"", 
+    ",", "\"\<\:0430\:0411\:0432\:0413\>\"", ",", 
+    "\"\<\:0410\:0431\:0412\:0433\>\""}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LetterQ", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<d\>\"", ",", "\"\<dfg\>\"", ",", "\"\<D\>\"", ",", "\"\<DFG\>\"", 
+    ",", "\"\<Dfg\>\"", ",", "\"\<dFG\>\"", ",", "\"\<dfG\>\"", ",", 
+    "\"\<dFg\>\"", ",", "\"\<DfG\>\"", ",", "\"\<dFgH\>\"", ",", 
+    "\"\<DfGh\>\""}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "True", ",", "True", ",", "True", ",", "True", ",", "True"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LetterQ", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<\:0430\:0411\:0432 \:0433\:0414\:0435\>\"", ",", 
+    "\"\<\:0410\:0431\:0412 \:0413\:0434\:0415\>\"", ",", 
+    "\"\<\:0430\:0431\:0432, \:0433\:0434\:0435\>\"", ",", "\"\<dFg hIj\>\"", 
+    ",", "\"\<DfG HiJ\>\"", ",", "\"\<dfg, hij\>\"", ",", "\"\<...\>\"", ",", 
+    "\"\<1\>\"", ",", "\"\<1234\>\"", ",", 
+    "\"\<\:0430\:0411\:0432\:0413dFgH\>\""}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "False", ",", "False", ",", "False", ",", "False", ",", "False"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell["\:0420\:0435\:0448\:0435\:043d\:0438\:0435", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LetterRusQ", "[", "string_String", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "str", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"str", "=", 
+      RowBox[{"Characters", "[", "string", "]"}]}], ";", 
+     RowBox[{"FreeQ", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"MemberQ", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"CharacterRange", "[", 
+              RowBox[{"\"\<\:0430\>\"", ",", "\"\<\:044f\>\""}], "]"}], ",", 
+             RowBox[{"CharacterRange", "[", 
+              RowBox[{"\"\<\:0410\>\"", ",", "\"\<\:042f\>\""}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<\:0451\>\"", ",", "\"\<\:0401\>\""}], "}"}]}], 
+            "]"}], ",", "#"}], "]"}], "&"}], "/@", "str"}], ",", "False"}], 
+      "]"}]}]}], "]"}]}]], "Input"],
+
+Cell["\:041f\:0440\:043e\:0432\:0435\:0440\:043a\:0430", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"LetterRusQ", "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<\:0430\>\"", ",", "\"\<\:0430\:0431\:0432\>\"", ",", "\"\<\:0410\>\"",
+     ",", "\"\<\:0410\:0411\:0412\>\"", ",", "\"\<\:0410\:0431\:0432\>\"", 
+    ",", "\"\<\:0430\:0411\:0412\>\"", ",", "\"\<\:0430\:0431\:0412\>\"", 
+    ",", "\"\<\:0430\:0411\:0432\>\"", ",", "\"\<\:0410\:0431\:0412\>\"", 
+    ",", "\"\<\:0430\:0411\:0432\:0413\>\"", ",", 
+    "\"\<\:0410\:0431\:0412\:0433\>\""}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "True", ",", "True", ",", "True", ",", "True", ",", "True"}], 
+  "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowToolbars->"EditBar",
+WindowSize->{1191, 679},
+WindowMargins->{{61, Automatic}, {Automatic, 38}},
+Visible->True,
+PrintingPageRange->{Automatic, Automatic},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "PastelColor.nb", 
+  CharacterEncoding -> "WindowsCyrillic"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 59, 0, 65, "Title"],
+Cell[CellGroupData[{
+Cell[651, 26, 49, 0, 75, "Section"],
+Cell[CellGroupData[{
+Cell[725, 30, 127, 1, 36, "Subsection"],
+Cell[CellGroupData[{
+Cell[877, 35, 417, 6, 27, "Subsubsection"],
+Cell[1297, 43, 52, 0, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1374, 47, 485, 9, 41, "Input"],
+Cell[1862, 58, 218, 5, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2117, 68, 320, 7, 41, "Input"],
+Cell[2440, 77, 206, 5, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2683, 87, 452, 9, 41, "Input"],
+Cell[3138, 98, 203, 5, 41, "Output"]
+}, Open  ]],
+Cell[3356, 106, 58, 0, 30, "Text"],
+Cell[3417, 108, 922, 24, 65, "Input"],
+Cell[4342, 134, 64, 0, 30, "Text"],
+Cell[CellGroupData[{
+Cell[4431, 138, 488, 9, 41, "Input"],
+Cell[4922, 149, 206, 5, 41, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
