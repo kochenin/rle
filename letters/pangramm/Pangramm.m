@@ -30,6 +30,12 @@ connPangramm=OpenSQLConnection[JDBC["mysql","localhost/rle_letters"],"Username"-
 pan=SQLSelect[connPangramm,"pangramm",{"pangramm"}]
 
 
+PangrammInDBQ[string_]:=MemberQ[pan,string]
+
+
+PangrammCount[]:=Length[pan]
+
+
 Pangramm[]:=RandomChoice[pan][[1]]
 
 
